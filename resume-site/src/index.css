@@ -1,14 +1,29 @@
+:root {
+  --text-color: #222;
+  --background-color: #f8fafc;
+  --header-background: #e7ecf3;
+  --accent-color: #004475;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  color: #222;
-  background: #f8fafc;
+  color: var(--text-color);
+  background: var(--background-color);
   line-height: 1.6;
+}
+
+body.dark {
+  --text-color: #f0f0f0;
+  --background-color: #1a1a1a;
+  --header-background: #111;
+  --accent-color: #9ecbff;
 }
 header {
   text-align: center;
   padding: 2rem 0;
-  background: #e7ecf3;
+  background: var(--header-background);
+  position: relative;
 }
 main {
   max-width: 920px;
@@ -27,11 +42,21 @@ h2 {
 h3 {
   margin: 1.4rem 0 .6rem;
   font-size: 1.2rem;
-  color: #004475;
+  color: var(--accent-color);
 }
 ul {
   padding-left: 1.2rem;
 }
 section {
   margin-bottom: 1.8rem;
+}
+
+.theme-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }
