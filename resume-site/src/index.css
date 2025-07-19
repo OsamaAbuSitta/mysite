@@ -66,3 +66,16 @@ section {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.icon-grid img {
+  width: 2rem;
+  height: 2rem;
+}
