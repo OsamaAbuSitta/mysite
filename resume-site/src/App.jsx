@@ -9,19 +9,30 @@ import Certifications from './components/Certifications'
 import Languages from './components/Languages'
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(() =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('theme') || 'system'
   )
 
   useEffect(() => {
-    document.body.classList.toggle('dark', darkMode)
-  }, [darkMode])
+    localStorage.setItem('theme', theme)
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    const apply = () => {
+      const dark = theme === 'dark' || (theme === 'system' && prefersDark.matches)
+      document.body.classList.toggle('dark', dark)
+    }
+    apply()
+    if (theme === 'system') {
+      prefersDark.addEventListener('change', apply)
+      return () => prefersDark.removeEventListener('change', apply)
+    }
+  }, [theme])
 
-  const toggleTheme = () => setDarkMode(d => !d)
+  const toggleTheme = () =>
+    setTheme(t => (t === 'system' ? 'light' : t === 'light' ? 'dark' : 'system'))
 
   return (
     <>
-      <Header toggleTheme={toggleTheme} darkMode={darkMode} />
+      <Header toggleTheme={toggleTheme} theme={theme} />
       <main>
         <Summary />
         <Skills />
