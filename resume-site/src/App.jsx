@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
+import About from './components/About'
 import Summary from './components/Summary'
 import Experience from './components/Experience'
 import Education from './components/Education'
@@ -33,6 +34,7 @@ export default function App() {
   return (
     <>
       <Header toggleTheme={toggleTheme} theme={theme} />
+      <About />
       <main>
         <Summary />
         <Skills />

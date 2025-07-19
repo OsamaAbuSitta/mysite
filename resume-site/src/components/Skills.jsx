@@ -1,8 +1,6 @@
 import { profile } from '../data/resume'
 
 export default function Skills() {
-  const iconUrl = name =>
-    `https://github-automated-repos.vercel.app/stackicons/${name}.svg`
 
   return (
     <section>
