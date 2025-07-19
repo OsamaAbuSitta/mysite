@@ -9,6 +9,17 @@ export const profile = {
     location: 'Amman, Jordan',
   },
   summary: 'Highly motivated Software architect with 11+ years of experience designing and building enterprise-grade solutions on .NET, Docker, and modern JavaScript frameworks. Passionate about microservices, DevOps, and clean architecture; recognised for open-source contributions and community support.',
+  stackicons: [
+    'csharp',
+    'python',
+    'typescript',
+    'javascript',
+    'react',
+    'docker',
+    'azuredevops',
+    'git',
+    'kafka'
+  ],
   skills: [
 'Languages: C#, Python, TypeScript, JavaScript, VB.NET, SQL , Java',
 'Frameworks: ASP.NET Core, MVC, EF Core, NHibernate, React, Angular',
