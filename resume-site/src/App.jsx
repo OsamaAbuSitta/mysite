@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Summary from './components/Summary'
 import Experience from './components/Experience'
@@ -8,11 +9,32 @@ import Certifications from './components/Certifications'
 import Languages from './components/Languages'
 
 export default function App() {
+  const [theme, setTheme] = useState(() =>
+    localStorage.getItem('theme') || 'system'
+  )
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    const apply = () => {
+      const dark = theme === 'dark' || (theme === 'system' && prefersDark.matches)
+      document.body.classList.toggle('dark', dark)
+    }
+    apply()
+    if (theme === 'system') {
+      prefersDark.addEventListener('change', apply)
+      return () => prefersDark.removeEventListener('change', apply)
+    }
+  }, [theme])
+
+  const toggleTheme = () =>
+    setTheme(t => (t === 'system' ? 'light' : t === 'light' ? 'dark' : 'system'))
+
   return (
     <>
-      <Header />
+      <Header toggleTheme={toggleTheme} theme={theme} />
       <main>
-        <Summary />   
+        <Summary />
         <Skills />
         <Projects />
         <Experience />
