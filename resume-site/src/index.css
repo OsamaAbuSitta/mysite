@@ -111,3 +111,13 @@ section {
   margin-top: 0;
   font-size: 2rem;
 }
+
+.about-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.about-links a:hover {
+  text-decoration: underline;
+}
