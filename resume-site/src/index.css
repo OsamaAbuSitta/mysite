@@ -79,3 +79,35 @@ section {
   width: 2rem;
   height: 2rem;
 }
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--header-background), var(--background-color));
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex: 2;
+  padding: 1rem;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
