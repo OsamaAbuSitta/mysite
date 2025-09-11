@@ -5,7 +5,7 @@ import { Badge } from '../ui/badge';
 
 const techStack = [
   'C#' , 'Typescript' , 'Javascript','.Net Core','Asp.Net' , 'Docker', 'Kubernetes', 'Kafka', 'ReactJs', 'SQL Server', 
-  'Keycloak', 'Angular', 'Oracle', 'MongoDb' , 'AzureDevOps'
+  'Keycloak', 'Angular', 'Oracle', 'MongoDb' , 'AzureDevOps' , 'CI/CD'
 ];
 
 export function Hero() {
