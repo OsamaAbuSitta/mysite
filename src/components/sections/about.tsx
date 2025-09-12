@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, User, Code, Server, Settings, ToolCase , MonitorCog , Braces } from 'lucide-react';
+import { Download, User, Code, Server, ToolCase , Braces } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import useSWR from 'swr';
