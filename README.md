@@ -45,14 +45,26 @@ npm run dev
 ```
 
 ## 🌐 Deployment
+### Docker 
+1. Build the Docker image:
+```bash
+docker build -t osama-portfolio .
+docker run -d -p 3000:80 osama-portfolio
+```
 
-### Vercel (Recommended)
+### Docker Comopse Deployment
+1. Run using docker compose:
+```bash
+docker-compose up -d
+```
+
+### Vercel
 
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Deploy with one click
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/OsamaAbuSitta/osama-portfolio)
+<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/OsamaAbuSitta/osama-portfolio) -->
 
 ### Netlify
 
@@ -71,6 +83,7 @@ npm run build
 ```
 
 2. Upload the contents of the `dist` folder to your web server
+
 
 ## 🔧 Configuration
 
