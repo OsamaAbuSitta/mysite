@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, User, Code, Server } from 'lucide-react';
+import { Download, User, Code, Server, Settings, ToolCase , MonitorCog , Braces } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import useSWR from 'swr';
@@ -10,15 +10,16 @@ export function About() {
 
     const skills = [
         {
-            icon: <User className="h-6 w-6" />,
+            icon: <ToolCase className="h-6 w-6" />,
             title: "Solutions Architecture",
             description: "Designing scalable, cloud-native systems using microservices"
         },
         {
-            icon: <Code className="h-6 w-6" />,
-            title: "Technologies",
-            description: ".NET 8, React, TypeScript, multi-tenant SaaS, DDD"
-        }, {
+            icon: <Braces className="h-6 w-6" />,
+            title: "Full Stack Developer", //"Full Stack Developer",
+            description: ".Net Core, JS, TS, ReactJs, Angular, Sql Server, Oracle "
+        }, 
+        {
             icon: <User className="h-6 w-6" />,
             title: "Team Leadership & Mentorship",
             description: "Leading engineering teams, mentoring developers"
