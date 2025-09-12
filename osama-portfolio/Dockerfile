@@ -15,7 +15,7 @@ FROM nginx:1.27-alpine
 
 # Replace default site config
 RUN rm -f /etc/nginx/conf.d/default.conf
-COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy Vite build output
 COPY --from=build /app/dist /usr/share/nginx/html
