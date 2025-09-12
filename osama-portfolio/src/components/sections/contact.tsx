@@ -272,9 +272,9 @@ export function Contact() {
               <p className="text-muted-foreground mb-4">
                 Let's connect and discuss opportunities
               </p>
-              <div className="text-sm text-muted-foreground">
+              {/* <div className="text-sm text-muted-foreground">
                 Available for freelance projects and full-time opportunities
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
