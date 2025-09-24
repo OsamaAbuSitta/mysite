@@ -203,7 +203,7 @@ export function Gists() {
                       {firstFile && (
                         <div className="mb-4">
                           <div className="bg-muted rounded-md p-3 text-sm font-mono overflow-hidden">
-                            <pre className="line-clamp-4 text-xs">
+                            <pre className="flex line-clamp-4 text-xs md:grid-cols-1 whitespace-pre-wrap break-words">
                               {firstFile.content}
                             </pre>
                           </div>
