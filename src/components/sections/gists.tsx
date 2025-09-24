@@ -202,8 +202,8 @@ export function Gists() {
                     <CardContent>
                       {firstFile && (
                         <div className="mb-4">
-                          <div className="bg-muted rounded-md p-3 text-sm font-mono overflow-hidden">
-                            <pre className="text-xs md:grid-cols-1 whitespace-pre-wrap break-words break-all max-w-full">
+                          <div className="bg-muted rounded-md p-3 text-sm font-mono min-w-0">
+                            <pre className="text-xs md:grid-cols-1 whitespace-pre-wrap break-words break-all max-w-full min-w-0 overflow-hidden" >
                               {firstFile.content}
                             </pre>
                           </div>
