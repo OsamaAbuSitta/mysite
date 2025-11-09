@@ -166,7 +166,7 @@ export function Gists() {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gists?.map((gist, index) => {
+            {gists?.slice(0, 3).map((gist, index) => {
               const firstFile = getFirstFile(gist.files);
               const fileCount = Object.keys(gist.files).length;
               
@@ -204,7 +204,7 @@ export function Gists() {
                         <div className="mb-4">
                           <div className="bg-muted rounded-md p-3 text-sm font-mono min-w-0">
                             <pre className="text-xs md:grid-cols-1 whitespace-pre-wrap break-words break-all max-w-full min-w-0 overflow-hidden" >
-                              {firstFile.content}
+                              {firstFile.content.substring(0, 150)}...
                             </pre>
                           </div>
                         </div>

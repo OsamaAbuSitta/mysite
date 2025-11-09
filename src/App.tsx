@@ -27,9 +27,9 @@ function App() {
        <footer className="bg-muted/30 py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-muted-foreground">
-              © 2025 Osama Abu Sitta. Built with React, Vite, and Tailwind CSS.{' '}
+              © 2025 Osama Abu Sitta. Built by me using React, Vite, and Tailwind CSS.{' '}
               <a
-                href="https://github.com/OsamaAbuSitta/osama-portfolio"
+                href="https://github.com/OsamaAbuSitta/mysite"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-colors underline underline-offset-4"
