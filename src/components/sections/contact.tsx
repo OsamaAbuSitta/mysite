@@ -99,120 +99,9 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Card>
-              <CardHeader>
-                <CardTitle>Send me a message</CardTitle>
-                <CardDescription>
-                  I'll get back to you as soon as possible
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {submitted ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-8"
-                  >
-                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Send className="h-8 w-8 text-green-600 dark:text-green-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">Message sent!</h3>
-                    <p className="text-muted-foreground">
-                      Thank you for reaching out. I'll get back to you soon.
-                    </p>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Honeypot field - hidden from users */}
-                    <input
-                      type="text"
-                      name="honeypot"
-                      value={formData.honeypot}
-                      onChange={handleChange}
-                      style={{ display: 'none' }}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                    
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-3 py-2 border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none"
-                        placeholder="Tell me about your project or how I can help..."
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="mr-2 h-4 w-4" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
-              </CardContent>
-            </Card>
-          </motion.div>
-
+     
           {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -222,7 +111,7 @@ export function Contact() {
             className="space-y-6"
           >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-semibold mb-4">Connect with me</h3>
+              {/* <h3 className="text-2xl font-semibold mb-4">Connect with me</h3> */}
               <p className="text-muted-foreground">
                 Find me on these platforms or reach out directly
               </p>
@@ -268,14 +157,14 @@ export function Contact() {
               </div>
             </TooltipProvider>
 
-            <div className="pt-8 text-center">
+            {/* <div className="pt-8 text-center">
               <p className="text-muted-foreground mb-4">
                 Let's connect and discuss opportunities
-              </p>
+              </p> */}
               {/* <div className="text-sm text-muted-foreground">
                 Available for freelance projects and full-time opportunities
               </div> */}
-            </div>
+            {/* </div> */}
           </motion.div>
         </div>
       </div>

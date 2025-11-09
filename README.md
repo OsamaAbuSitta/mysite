@@ -25,8 +25,8 @@ A modern, responsive personal portfolio website built with React, Vite, Tailwind
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/OsamaAbuSitta/osama-portfolio.git
-cd osama-portfolio
+git clone https://github.com/OsamaAbuSitta/mysite.git
+cd mysite
 ```
 
 2. Install dependencies:
@@ -58,23 +58,6 @@ docker run -d -p 3000:80 osama-portfolio
 docker-compose up -d
 ```
 
-### Vercel
-
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy with one click
-
-<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/OsamaAbuSitta/osama-portfolio) -->
-
-### Netlify
-
-1. Build the project:
-```bash
-npm run build
-```
-
-2. Deploy the `dist` folder to Netlify
-
 ### Manual Deployment
 
 1. Build the project:
@@ -100,17 +83,8 @@ Create a `.env` file based on `.env.example`:
 1. **Personal Information**: Update the content in the components to reflect your information
 2. **GitHub Username**: Change `GITHUB_USERNAME` in `src/lib/github.ts`
 3. **Medium Profile**: Update the RSS URL in `src/lib/medium.ts`
-4. **VS Code Extension**: Update the extension ID in `src/lib/vscode.ts`
-5. **Social Links**: Modify the links in `src/components/sections/contact.tsx`
+4. **Social Links**: Modify the links in `src/components/sections/contact.tsx`
 
-## 📱 Sections
-
-- **Hero**: Introduction with animated background and tech stack
-- **About**: Personal bio with GitHub profile integration
-- **Projects**: Featured projects with live GitHub data
-- **Blog**: Latest Medium articles via RSS feed
-- **Gists**: GitHub gists with syntax highlighting and copy functionality
-- **Contact**: Contact form with social media links
 
 ## 🎨 Design System
 
@@ -136,13 +110,6 @@ For production build testing:
 npm run build
 npm run preview
 ```
-
-## 📈 Performance
-
-- **Lighthouse Score**: 95+ on all metrics
-- **Bundle Size**: Optimized with Vite's tree shaking
-- **Loading**: Lazy loading and code splitting
-- **Caching**: SWR for efficient data fetching
 
 ## 🤝 Contributing
 

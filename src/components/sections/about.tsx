@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, User, Code, Server, ToolCase , Braces } from 'lucide-react';
+import { Download, User, Code, Server, ToolCase , Braces, Link } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import useSWR from 'swr';
@@ -110,7 +110,7 @@ export function About() {
                                         }}
                                     />
                                     <div>
-                                        <h3 className="font-semibold">{githubUser.name}</h3>
+                                        <h3 className="font-semibold">GitHub Profile : {githubUser.name}</h3>
                                         <p className="text-sm text-muted-foreground line-clamp-2">{githubUser.bio}</p>
                                         <div className="flex space-x-4 text-sm text-muted-foreground mt-1">
                                             <span>{githubUser.followers} followers</span>
@@ -133,9 +133,9 @@ export function About() {
                                 </div>
                             ) : null}
 
-                            <Button size="lg" className="group">
-                                <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                                Download CV
+                            <Button size="lg" className="group" onClick={() => window.open(githubUser?.html_url, '_blank')}>
+                                <Link className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                                View GitHub Profile 
                             </Button>
                         </div>
                     </motion.div>
