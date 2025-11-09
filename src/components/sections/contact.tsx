@@ -1,44 +1,44 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, MessageSquare, Send, HelpCircle } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Mail, Github, Linkedin, MessageSquare, HelpCircle } from 'lucide-react';
+//import { Button } from '../ui/button';
+//import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
-import { useState } from 'react';
+//import { useState } from 'react';
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    honeypot: '' // Spam protection
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  //   honeypot: '' // Spam protection
+  // });
+  //const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
     
-    // Honeypot check
-    if (formData.honeypot) {
-      return;
-    }
+  //   // Honeypot check
+  //   if (formData.honeypot) {
+  //     return;
+  //   }
 
-    setIsSubmitting(true);
+  //   setIsSubmitting(true);
     
-    // Simulate form submission (replace with actual implementation)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '', honeypot: '' });
-    }, 1000);
-  };
+  //   // Simulate form submission (replace with actual implementation)
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     //setSubmitted(true);
+  //     setFormData({ name: '', email: '', message: '', honeypot: '' });
+  //   }, 1000);
+  // };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [e.target.name]: e.target.value
+  //   }));
+  // };
 
   const socialLinks = [
     {
